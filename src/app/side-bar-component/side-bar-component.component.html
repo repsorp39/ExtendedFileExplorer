@@ -1,0 +1,14 @@
+<aside
+  class="h-[calc(100vh-40px)] w-[200px] border-r border-gray-800 absolute bottom-0"
+>
+  <ul class="flex flex-col px-2 gap-y-3">
+    <li
+      class="px-2 py-1 rounded-md cursor-pointer hover:bg-gray-500/20"
+      [ngClass]="{ 'bg-gray-500/70 text-white': bookmarked.name === 'Music' }"
+      *ngFor="let bookmarked of bookmarked"
+    >
+      <i [className]="bookmarked.icon"> </i>
+      <span> {{ bookmarked.name }} </span>
+    </li>
+  </ul>
+</aside>

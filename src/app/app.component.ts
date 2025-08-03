@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { SideBarComponentComponent } from "./side-bar-component/side-bar-component.component";
+import { FileExplorerHeaderComponent } from "./file-explorer-header/file-explorer-header.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [SideBarComponentComponent, FileExplorerHeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
