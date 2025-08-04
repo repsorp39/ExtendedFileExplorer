@@ -1,9 +1,15 @@
-<header class="flex justify-between items-center place-content-end text-sm font-sans font-semibold float-right w-4/5 gap-x-4 px-2 py-1">
+<header
+  class="flex justify-between items-center place-content-end text-sm font-sans font-semibold float-right w-4/5 px-2 py-1"
+>
   <section
     class="flex w-full justify-between bg-gray-800 rounded-md px-1 py-[2px]"
   >
     <div>
-      <strong class="space-x-4"><i class="pi pi-home"> </i> Home</strong>
+      <strong
+        class="gap-x-2 flex items-center"
+        ><i class="me-2 inline-block" [className]="openedFolder.icon"> </i>
+        {{ openedFolder.name }}</strong
+      >
     </div>
     <div><i class="pi pi-ellipsis-v"></i></div>
   </section>

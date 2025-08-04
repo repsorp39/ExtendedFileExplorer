@@ -3,12 +3,16 @@
 >
   <ul class="flex flex-col px-2 gap-y-3">
     <li
-      class="px-2 py-1 rounded-md cursor-pointer hover:bg-gray-500/20"
-      [ngClass]="{ 'bg-gray-500/70 text-white': bookmarked.name === 'Music' }"
-      *ngFor="let bookmarked of bookmarked"
+      class="px-2 py-1 rounded-md cursor-pointer"
+      (click)="openFolder(folder.name)"
+      [ngClass]="{
+        'bg-gray-500/70 text-white': folder.name === this.currentOpened.name,
+        ' hover:bg-gray-500/20': folder.name !== this.currentOpened.name
+      }"
+      *ngFor="let folder of folders"
     >
-      <i [className]="bookmarked.icon"> </i>
-      <span> {{ bookmarked.name }} </span>
+      <i [className]="folder.icon"> </i>
+      <span> {{ folder.name }} </span>
     </li>
   </ul>
 </aside>
